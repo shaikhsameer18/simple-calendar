@@ -1,0 +1,342 @@
+/* Import Poppins font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f8fafc;
+  color: #334155;
+}
+
+/* Auth container styles */
+.auth-container {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  min-height: 100vh;
+  background: #ffffff;
+  background-image: radial-gradient(
+      at 40% 20%,
+      hsla(228, 100%, 74%, 0.15) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 80% 0%, hsla(189, 100%, 56%, 0.15) 0px, transparent 50%),
+    radial-gradient(at 0% 50%, hsla(355, 100%, 93%, 0.15) 0px, transparent 50%);
+}
+
+/* Form styles */
+.form-container {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  padding: 2.5rem;
+  border-radius: 1rem;
+  width: 100%;
+  max-width: 380px;
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.form-title {
+  color: #1e293b;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.form-subtitle {
+  color: #64748b;
+  font-size: 0.875rem;
+  margin-bottom: 2rem;
+}
+
+/* Event form styles */
+.event-form {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+}
+
+.event-form-title {
+  color: #1e293b;
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Button styles */
+.custom-button {
+  background: #3b82f6 !important;
+  color: white !important;
+  padding: 0.75rem 1.5rem !important;
+  border-radius: 0.5rem !important;
+  font-weight: 500 !important;
+  text-transform: none !important;
+  transition: all 0.2s ease !important;
+  box-shadow: none !important;
+}
+
+.custom-button:hover {
+  background: #2563eb !important;
+  transform: translateY(-1px);
+}
+
+/* Input field styles */
+.custom-input .MuiOutlinedInput-root {
+  background-color: #f8fafc;
+  border-radius: 0.5rem;
+  border: 1px solid #e2e8f0;
+}
+
+.custom-input .MuiOutlinedInput-root:hover {
+  border-color: #cbd5e1;
+}
+
+.custom-input .MuiOutlinedInput-root.Mui-focused {
+  border-color: #3b82f6;
+}
+
+/* Error/Success messages */
+.message {
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+}
+
+.error-message {
+  background-color: #fef2f2;
+  color: #dc2626;
+  border: 1px solid #fee2e2;
+}
+
+.success-message {
+  background-color: #f0fdf4;
+  color: #16a34a;
+  border: 1px solid #dcfce7;
+}
+
+/* Previous styles remain the same until the event form styles */
+
+/* Event form styles */
+.event-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.event-form-title {
+  color: #1e293b;
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Event list styles */
+.event-list {
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+.event-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #e2e8f0;
+  transition: all 0.2s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.event-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.event-title {
+  color: #1e293b;
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.event-description {
+  color: #64748b;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.event-time {
+  color: #94a3b8;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Button styles - Updated color scheme */
+.custom-button {
+  background: #7c3aed !important; /* Purple */
+  color: white !important;
+  padding: 0.75rem 1.5rem !important;
+  border-radius: 0.5rem !important;
+  font-weight: 500 !important;
+  text-transform: none !important;
+  transition: all 0.2s ease !important;
+  box-shadow: none !important;
+}
+
+.custom-button:hover {
+  background: #6d28d9 !important; /* Darker purple */
+  transform: translateY(-1px);
+}
+
+.delete-button {
+  color: #ef4444 !important;
+  background: #fee2e2 !important;
+  padding: 0.5rem 1rem !important;
+  border-radius: 0.5rem !important;
+  font-size: 0.875rem !important;
+  transition: all 0.2s ease !important;
+}
+
+.delete-button:hover {
+  background: #fecaca !important;
+}
+
+
+/* Add these new styles to your existing App.css */
+
+/* Edit button styles */
+.edit-button {
+  color: #7c3aed !important;
+  background: #f3e8ff !important;
+  padding: 0.5rem 1rem !important;
+  border-radius: 0.5rem !important;
+  font-size: 0.875rem !important;
+  transition: all 0.2s ease !important;
+}
+
+.edit-button:hover {
+  background: #ede9fe !important;
+}
+
+/* Modal styles */
+.MuiDialog-paper {
+  border-radius: 1rem !important;
+}
+
+.MuiDialogTitle-root {
+  padding: 1.5rem !important;
+  background: #f8fafc;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.MuiDialogContent-root {
+  padding: 1.5rem !important;
+}
+
+.MuiDialogActions-root {
+  padding: 1rem 1.5rem !important;
+  border-top: 1px solid #e2e8f0;
+}
+
+
+.calendar-wrapper {
+  margin: 2rem 0;
+  padding: 1rem;
+  background: white;
+  border-radius: 1rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.rbc-calendar {
+  font-family: "Poppins", sans-serif !important;
+}
+
+.rbc-header {
+  padding: 0.75rem !important;
+  font-weight: 500 !important;
+  color: #1e293b !important;
+}
+
+.rbc-event {
+  padding: 0.25rem 0.5rem !important;
+  background-color: #7c3aed !important;
+  border: none !important;
+}
+
+.rbc-event-content {
+  font-size: 0.875rem !important;
+  font-weight: 500 !important;
+}
+
+.rbc-today {
+  background-color: #f8fafc !important;
+}
+
+.event-time {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #64748b;
+  font-size: 0.875rem;
+}
+
+.time-range {
+  color: #7c3aed;
+  font-weight: 500;
+}
+
+.no-events {
+  text-align: center;
+  color: #94a3b8;
+  padding: 2rem;
+  background: white;
+  border-radius: 1rem;
+  border: 1px solid #e2e8f0;
+}
+
+/* Tooltip styles */
+.rbc-tooltip {
+  padding: 0.5rem 0.75rem;
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+  font-size: 0.875rem;
+  color: #1e293b;
+}
