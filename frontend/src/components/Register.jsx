@@ -16,11 +16,14 @@ const Register = () => {
     setSuccess("");
 
     try {
-      await axios.post("http://localhost:5000/api/auth/register", {
-        name,
-        email,
-        password,
-      });
+      await axios.post(
+        "https://simple-calendar.onrender.com/api/auth/register",
+        {
+          name,
+          email,
+          password,
+        }
+      );
       setSuccess("Registration successful! Please login.");
       setName("");
       setEmail("");
@@ -37,21 +40,20 @@ const Register = () => {
         Create Account
       </div>
       <Typography className="form-subtitle">
-        Sign up to get started with your calendar
+        Sign up for a new account
       </Typography>
 
       {error && <div className="message error-message">{error}</div>}
-
       {success && <div className="message success-message">{success}</div>}
 
       <form onSubmit={handleRegister}>
         <TextField
           label="Full Name"
-          fullWidth
-          margin="normal"
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
+          fullWidth
+          margin="normal"
           variant="outlined"
           className="custom-input"
           sx={{ mb: 2 }}
@@ -60,11 +62,11 @@ const Register = () => {
         <TextField
           label="Email Address"
           type="email"
-          fullWidth
-          margin="normal"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
+          fullWidth
+          margin="normal"
           variant="outlined"
           className="custom-input"
           sx={{ mb: 2 }}
@@ -73,18 +75,18 @@ const Register = () => {
         <TextField
           label="Password"
           type="password"
-          fullWidth
-          margin="normal"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
+          fullWidth
+          margin="normal"
           variant="outlined"
           className="custom-input"
           sx={{ mb: 3 }}
         />
 
         <Button className="custom-button" type="submit" fullWidth>
-          Sign Up
+          Create Account
         </Button>
       </form>
     </Paper>

@@ -21,16 +21,22 @@ function App() {
   const [editingEvent, setEditingEvent] = useState(null);
 
   const fetchEvents = async () => {
-    const response = await axios.get("http://localhost:5000/api/events", {
-      headers: { Authorization: `Bearer ${token}` },
-    });
+    const response = await axios.get(
+      "https://simple-calendar.onrender.com/api/events",
+      {
+        headers: { Authorization: `Bearer ${token}` },
+      }
+    );
     setEvents(response.data);
   };
 
   const deleteEvent = async (id) => {
-    await axios.delete(`http://localhost:5000/api/events/${id}`, {
-      headers: { Authorization: `Bearer ${token}` },
-    });
+    await axios.delete(
+      `https://simple-calendar.onrender.com/api/events/${id}`,
+      {
+        headers: { Authorization: `Bearer ${token}` },
+      }
+    );
     fetchEvents();
   };
 
@@ -40,7 +46,7 @@ function App() {
 
   const handleUpdateEvent = async (updatedEvent) => {
     await axios.put(
-      `http://localhost:5000/api/events/${updatedEvent._id}`,
+      `https://simple-calendar.onrender.com/api/events/${updatedEvent._id}`,
       {
         title: updatedEvent.title,
         description: updatedEvent.description,

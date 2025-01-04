@@ -15,7 +15,7 @@ const Login = ({ setToken }) => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/auth/login",
+        "https://simple-calendar.onrender.com/api/auth/login",
         {
           email,
           password,

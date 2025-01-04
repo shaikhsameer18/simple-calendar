@@ -1,4 +1,4 @@
-import  { useState } from "react";
+import { useState } from "react";
 import PropTypes from "prop-types";
 import axios from "axios";
 import { Paper, TextField, Button } from "@mui/material";
@@ -16,7 +16,7 @@ const EventForm = ({ token, fetchEvents, selectedDate }) => {
     dateObj.setHours(parseInt(hours), parseInt(minutes));
 
     await axios.post(
-      "http://localhost:5000/api/events",
+      "https://simple-calendar.onrender.com/api/events",
       { 
         title, 
         description, 
